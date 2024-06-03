@@ -1,0 +1,256 @@
+.precios {
+  width: 100%;
+}
+.precios__titulo {
+  font-family: "Raleway";
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 42.26px;
+  text-align: center;
+  margin-bottom: calc(0.9rem - 0.4px);
+  margin-top: 2.63rem;
+}
+
+.precio {
+  position: relative;
+  width: calc(18.5rem - 1px);
+  height: calc(15.8rem + 1px);
+  margin: 0 auto;
+  margin-bottom: 3.375em;
+  align-content: center;
+  padding-top: 1.563em;
+}
+.precio--basic {
+  border: 1px solid rgb(251, 59, 100);
+  border-radius: 1rem 1rem;
+}
+.precio--basic:hover {
+  box-shadow: 5px 10px 27px 0px rgb(251, 59, 100);
+  width: 21.188em;
+  height: 17.313em;
+}
+.precio--basic:hover .precio__boton {
+  box-shadow: 5px 10px 27px 0px rgb(251, 59, 100);
+  left: 94px;
+}
+.precio--professional {
+  border: 1px solid rgb(7, 172, 230);
+  border-radius: 1rem 1rem;
+}
+.precio--professional:hover {
+  box-shadow: 5px 10px 27px 0px rgb(7, 172, 230);
+  width: 21.188em;
+  height: 17.313em;
+}
+.precio--professional:hover .precio__boton {
+  box-shadow: 5px 10px 27px 0px rgb(7, 172, 230);
+  left: 94px;
+}
+.precio--premium {
+  border: 1px solid rgb(85, 223, 180);
+  border-radius: 1rem 1rem;
+}
+.precio--premium:hover {
+  box-shadow: 5px 10px 27px 0px rgb(85, 223, 180);
+  width: 21.188em;
+  height: 17.313em;
+}
+.precio--premium:hover .precio__boton {
+  box-shadow: 5px 10px 27px 0px rgb(85, 223, 180);
+  left: 94px;
+}
+.precio__content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  height: 100%;
+  margin: 0 0.9rem;
+}
+.precio__content--margin {
+  margin-bottom: 2.5em;
+}
+.precio__content__tit {
+  display: block;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  font-family: "Raleway";
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(19, 37, 59);
+}
+.precio__content__eur {
+  display: block;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  font-family: "Open Sans";
+  font-size: 2.875em;
+  font-weight: 300;
+  line-height: 64px;
+  text-align: center;
+}
+.precio__content__eur--basic {
+  color: rgb(251, 59, 100);
+}
+.precio__content__eur--professional {
+  color: rgb(7, 172, 230);
+}
+.precio__content__eur--premium {
+  color: rgb(85, 223, 180);
+}
+.precio__content__oferta {
+  display: block;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  font-family: "Raleway";
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 14.09px;
+  text-align: center;
+  color: rgb(19, 37, 59);
+}
+.precio__content__oferta--display {
+  display: none;
+}
+.precio__lista {
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+}
+.precio__lista ul .check {
+  font-family: "Open Sans";
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 19.07px;
+  text-align: left;
+  list-style: none;
+  margin-bottom: 1.563em;
+  list-style-image: url("../recursos/images/checkbox.png");
+}
+.precio__lista ul .none {
+  font-family: "Open Sans";
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 19.07px;
+  text-align: left;
+  list-style: none;
+  margin-bottom: 1.563em;
+  list-style-image: url("../recursos/images/cross.png");
+}
+.precio__boton {
+  position: absolute;
+  bottom: -20px;
+  left: 70px;
+}
+.precio__boton--basic {
+  color: rgb(255, 255, 255);
+  background-color: rgb(235, 71, 110);
+  min-width: 9.4rem;
+  height: 3.13rem;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 3.13rem;
+  font-size: 0.813em;
+  border-radius: 50px;
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+.precio__boton--basic:hover {
+  box-shadow: 5px 10px 14px 0px rgb(235, 71, 110);
+}
+.precio__boton--professional {
+  color: rgb(255, 255, 255);
+  background-color: rgb(7, 172, 230);
+  min-width: 9.4rem;
+  height: 3.13rem;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 3.13rem;
+  font-size: 0.813em;
+  border-radius: 50px;
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+.precio__boton--professional:hover {
+  box-shadow: 5px 10px 14px 0px rgb(7, 172, 230);
+}
+.precio__boton--premium {
+  color: rgb(255, 255, 255);
+  background-color: rgb(85, 223, 180);
+  min-width: 9.4rem;
+  height: 3.13rem;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 3.13rem;
+  font-size: 0.813em;
+  border-radius: 50px;
+  font-family: "Open Sans";
+  font-weight: 700;
+}
+.precio__boton--premium:hover {
+  box-shadow: 5px 10px 14px 0px rgb(33, 59, 51);
+}
+
+@media only screen and (min-width: 1000px) {
+  .precios__content {
+    display: grid;
+    grid-template-columns: repeat(3, 23.38em);
+    gap: 3.688em;
+    justify-content: center;
+    margin-top: 3.75em;
+    height: 33.25em;
+  }
+  .precios__titulo {
+    margin-top: 3.569em;
+  }
+  .precio {
+    width: 23.38em;
+    height: 30.51em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .precio:hover {
+    width: 25.44em;
+    height: 32.94em;
+    transition: width 0.15s ease-out, height 0.15s ease-out;
+  }
+  .precio:hover .precio__boton {
+    left: 133px;
+    cursor: pointer;
+  }
+  .precio__content {
+    display: block;
+    width: -moz-max-content;
+    width: max-content;
+    height: 7em;
+    margin: 0;
+  }
+  .precio__content__oferta {
+    margin-top: 0.323em;
+  }
+  .precio__boton {
+    left: 112px;
+  }
+  .precio__lista {
+    display: block;
+    width: -moz-max-content;
+    width: max-content;
+    height: 20em;
+    padding-left: 3em;
+    align-content: center;
+  }
+  .precio__lista ul {
+    font-size: 0.875em;
+    line-height: 1.192em;
+  }
+  .precio__lista ul li {
+    margin-bottom: 2.563em !important;
+  }
+}/*# sourceMappingURL=card_precio.css.map */

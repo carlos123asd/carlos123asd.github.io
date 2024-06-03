@@ -1,0 +1,146 @@
+.caracteristicas {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2rem;
+}
+.caracteristicas__header {
+  background-image: url(../recursos/images/top-banner.jpg);
+  width: 100%;
+  height: 267px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.caracteristicas__titulo {
+  line-height: 35px;
+  text-align: center;
+  max-width: calc(16rem - 10px);
+  height: calc(7rem + 2px);
+  word-wrap: break-word;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  margin-top: calc((1rem - 3px) * 2);
+  margin-bottom: calc(1rem + 9px);
+  font-family: "Raleway";
+  font-size: 1.875em;
+  font-weight: 300;
+}
+
+.elementos .elemento {
+  margin-bottom: 1.6rem;
+}
+.elementos .elemento__imagen {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 0.9rem;
+  width: 78px;
+  height: 63px;
+}
+.elementos .elemento__imagen__uno {
+  background-image: url(../recursos/images/carac_back.svg);
+  width: 62.71px;
+  height: 62.71px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+.elementos .elemento__imagen__dos {
+  background-image: url(../recursos/images/carac_front.svg);
+  width: 44px;
+  height: 52px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  right: 4px;
+  top: 3px;
+}
+.elementos .elemento__imagen__uno2 {
+  background-image: url(../recursos/images/carac2_back.svg);
+  width: 63px;
+  height: 63px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+.elementos .elemento__imagen__dos2 {
+  background-image: url(../recursos/images/carac2_front.svg);
+  width: 65.43px;
+  height: 36.5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  right: -9.98px;
+  top: 12.25px;
+}
+.elementos .elemento__imagen__uno3 {
+  background-image: url(../recursos/images/carac3_back.svg);
+  width: 62.71px;
+  height: 62.71px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+.elementos .elemento__imagen__dos3 {
+  background-image: url(../recursos/images/carac3_front.svg);
+  width: 52px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  right: -6px;
+  top: 6px;
+}
+.elementos .elemento__numero {
+  display: block;
+  line-height: 24px;
+  letter-spacing: 5.9600000381px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-bottom: calc(1em - 1px);
+  font-family: "Raleway";
+  font-size: 1.25em;
+  font-weight: 800;
+}
+.elementos .elemento__texto {
+  display: block;
+  width: 6.63em;
+  margin: 0 auto;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(165, 165, 165);
+  word-wrap: break-word;
+  font-family: "Raleway";
+  font-size: 1.063em;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 1000px) {
+  .caracteristicas__header {
+    background-image: url(../recursos/images/top-banner.jpg);
+    width: 100%;
+    height: 594px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .caracteristicas__titulo {
+    max-width: 100%;
+  }
+  .elementos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}/*# sourceMappingURL=caracteristicas.css.map */

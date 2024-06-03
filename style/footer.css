@@ -1,0 +1,63 @@
+.footer {
+  width: 100%;
+  height: 89px;
+  background-color: white;
+  align-content: center;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
+  box-shadow: 0 -5px 40px 0px rgba(0, 0, 0, 0.2);
+}
+.footer__texto, .footer__imagenes {
+  display: inline-block;
+}
+.footer__texto {
+  margin-left: calc(1vw + 30px);
+}
+.footer__title {
+  display: block;
+  color: #08A6E4;
+  width: 60%;
+  font-size: 2em;
+  font-family: "Raleway";
+  font-weight: 300;
+}
+.footer__sub {
+  display: block;
+  font-family: "Open Sans";
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 14.98px;
+  text-align: left;
+  color: rgb(165, 165, 165);
+}
+.footer__imagenes {
+  margin-right: 2em;
+  vertical-align: super;
+}
+.footer__imagenes__twitter, .footer__imagenes__facebook {
+  display: inline-block;
+}
+.footer__imagenes__twitter {
+  margin-right: 1.25em;
+  background-image: url(../recursos/images/twiter.png);
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__imagenes__facebook {
+  background-image: url(../recursos/images/facebook.png);
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer__imagenes__twitter:hover, .footer__imagenes__facebook:hover {
+    scale: 1.1;
+    transition: scale 0.25s ease-out;
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,22 @@
+$box-shadow-config: 5px 10px 14px 0px;
+
+@mixin box-shadow($color){
+    box-shadow: $box-shadow-config $color;
+}
+
+@mixin button($color, $color-shadow, $color-text, $width, $height, $size){
+    color: $color-text;
+    background-color: $color;
+    min-width: $width;
+    height: $height;
+    text-align: center;
+    margin: 0 auto;
+    line-height: $height;
+    font-size: $size;
+    border-radius: 50px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    &:hover{
+        @include box-shadow($color-shadow);
+    }
+}

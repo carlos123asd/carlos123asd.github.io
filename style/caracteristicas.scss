@@ -1,0 +1,115 @@
+@import "./elements/imagenes-config.scss";
+
+$font-carac: 'Raleway';
+$center-eye: 12.25px;
+
+
+.caracteristicas{
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+    &__header{
+        @include config-img('top-banner','.jpg',100%, 267px);
+    }
+
+    &__titulo{
+        line-height: 35px;
+        text-align: center;
+        max-width: calc(16rem - 10px);
+        height: calc(7rem + 2px);
+        word-wrap: break-word;
+        color: rgba(0, 0, 0, 1);
+        margin: 0 auto;
+        margin : {
+            top: calc(calc(1rem - 3px)*2);
+            bottom: calc(1rem + 9px);
+        }
+        font : {
+          family: $font-carac;
+          size: 1.875em;
+          weight: 300;
+        }
+    }
+}
+
+.elementos{
+    .elemento{
+        margin-bottom: 1.6rem;
+        &__imagen{
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: 0.9rem;
+            width: 78px;
+            height: 63px;
+            &__uno{
+                @include config-img-superposicion('carac_back','.svg',62.71px, 62.71px, -1);
+            }
+            &__dos{
+                @include config-img-superposicion('carac_front','.svg',44px, 52px, 1);
+                right: 4px;
+                top: 3px;
+            }
+            &__uno2{
+                @include config-img-superposicion('carac2_back','.svg',63px, 63px, -1);
+            }
+            &__dos2{
+                @include config-img-superposicion('carac2_front','.svg',65.43px, 36.5px, 1);
+                right: -9.98px;
+                top: $center-eye;
+            }
+            &__uno3{
+                @include config-img-superposicion('carac3_back','.svg',62.71px, 62.71px, -1);
+            }
+            &__dos3{
+                @include config-img-superposicion('carac3_front','.svg',52px, 48px, 1);
+                right: -6px;
+                top: 6px;
+            }
+        }
+        &__numero{
+            display: block;
+            line-height: 24px;
+            letter-spacing: 5.960000038146973px;
+            text-align: center;
+            color: rgba(0, 0, 0, 1);
+            margin-bottom: calc(1em - 1px);
+            font : {
+                family: $font-carac;
+                size: 1.25em;
+                weight: 800;
+            }
+        }
+        &__texto{
+            display: block;
+            width: 6.63em;
+            margin: 0 auto;
+            line-height: 20px;
+            text-align: center;
+            color: rgba(165, 165, 165, 1);
+            word-wrap: break-word ;
+            font : {
+                family: $font-carac;
+                size: 1.063em;
+                weight: 400;
+            };
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    //CARATERISTICAS
+    .caracteristicas{
+        &__header{
+            @include config-img('top-banner','.jpg',100%, 594px);
+        }
+        &__titulo{
+            max-width: 100%;
+        }
+    }
+    
+    .elementos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

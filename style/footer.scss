@@ -1,0 +1,76 @@
+@import "./elements/imagenes-config.scss";
+
+//variables
+$footer-color-border: rgba(0, 0, 0, 0.2);
+$footer-color-text: #08A6E4;
+$background-white: #ffff;
+$header-height: 89px;  
+$header-margin-horizontal: calc(1vw + 30px); 
+//mixins
+@mixin box-shadown($x, $y, $saturation, $extension, $color){
+    box-shadow: $x $y $saturation $extension $color;
+}
+
+.footer{ // cambiar a px, que propiedad?
+    width: 100%;
+    height: $header-height;
+    background-color: $background-white;
+    align-content: center;
+    text-align-last: justify;
+  @include box-shadown(0, -5px, 40px, 0px, $footer-color-border);
+
+    &__texto, &__imagenes{
+        display: inline-block;
+    }
+    &__texto{
+        margin-left: $header-margin-horizontal;
+    }
+
+    &__title{
+        display: block;
+        color: $footer-color-text;
+        width: 60%;
+        font : {
+            size: 2em;
+            family: 'Raleway';
+            weight: 300;
+        }
+    }
+    &__sub{
+        display: block;
+        font : {
+            family: 'Open Sans';
+            size: .8em;
+            weight: 400;
+        }
+        line-height: 14.98px;
+        text-align: left;
+        color: rgba(165, 165, 165, 1);        
+    }
+
+    &__imagenes{
+        margin-right: 2em;
+        vertical-align: super;
+        &__twitter, &__facebook{
+            display: inline-block;
+        }
+        &__twitter{
+            margin-right: 1.25em;
+            @include config-img('twiter','.png',24px, 24px);
+        }
+        &__facebook{
+            @include config-img('facebook','.png',24px, 24px);
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .footer{
+        &__imagenes{
+            &__twitter:hover, &__facebook:hover{
+                scale: 1.1;
+                transition: scale 0.25s ease-out;
+            }
+        }
+    }
+}

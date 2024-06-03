@@ -1,0 +1,300 @@
+$color_1: rgb(19, 37, 59);
+$color_2: rgb(251, 59, 100);
+$color_3: rgb(7, 172, 230);
+$color_4: rgb(85, 223, 180);
+$color_5: rgb(255, 255, 255);
+$font-family_1: "Raleway";
+$font-family_2: "Open Sans";
+$background-color_1: rgb(235, 71, 110);
+$background-color_2: rgb(7, 172, 230);
+$background-color_3: rgb(85, 223, 180);  
+
+.precios {
+  width: 100%;
+
+  &__titulo {
+    font-family: $font-family_1;
+    font-size: 2.25em;
+    font-weight: 400;
+    line-height: 42.26px;
+    text-align: center;
+    margin-bottom: calc(0.9rem - 0.4px);
+    margin-top: 2.63rem;
+  }
+}
+
+.precio {
+  position: relative;
+  width: calc(18.5rem - 1px);
+  height: calc(15.8rem + 1px);
+  margin: 0 auto;
+  margin-bottom: 3.375em;
+  align-content: center;
+  padding-top: 1.563em;
+
+  &--basic {
+    border: 1px solid $color_2;
+    border-radius: 1rem 1rem;
+
+    &:hover {
+      box-shadow: 5px 10px 27px 0px $color_2;
+      width: 21.188em;
+      height: 17.313em;
+
+      .precio__boton {
+        box-shadow: 5px 10px 27px 0px $color_2;
+        left: 94px;
+      }
+    }
+  }
+
+  &--professional {
+    border: 1px solid $color_3;
+    border-radius: 1rem 1rem;
+
+    &:hover {
+      box-shadow: 5px 10px 27px 0px $color_3;
+      width: 21.188em;
+      height: 17.313em;
+
+      .precio__boton {
+        box-shadow: 5px 10px 27px 0px $color_3;
+        left: 94px;
+      }
+    }
+  }
+
+  &--premium {
+    border: 1px solid $color_4;
+    border-radius: 1rem 1rem;
+
+    &:hover {
+      box-shadow: 5px 10px 27px 0px $color_4;
+      width: 21.188em;
+      height: 17.313em;
+
+      .precio__boton {
+        box-shadow: 5px 10px 27px 0px $color_4;
+        left: 94px;
+      }
+    }
+  }
+
+  &__content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 100%;
+    margin: 0 0.9rem;
+
+    &--margin {
+      margin-bottom: 2.5em;
+    }
+
+    &__tit {
+      display: block;
+      width: 100%;
+      height: -moz-max-content;
+      height: max-content;
+      font-family: $font-family_1;
+      font-size: 1.25em;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      color: $color_1;
+    }
+
+    &__eur {
+      display: block;
+      width: 100%;
+      height: -moz-max-content;
+      height: max-content;
+      font-family: $font-family_2;
+      font-size: 2.875em;
+      font-weight: 300;
+      line-height: 64px;
+      text-align: center;
+
+      &--basic {
+        color: $color_2;
+      }
+
+      &--professional {
+        color: $color_3;
+      }
+
+      &--premium {
+        color: $color_4;
+      }
+    }
+
+    &__oferta {
+      display: block;
+      width: 100%;
+      height: -moz-max-content;
+      height: max-content;
+      font-family: $font-family_1;
+      font-size: 0.75em;
+      font-weight: 700;
+      line-height: 14.09px;
+      text-align: center;
+      color: $color_1;
+
+      &--display {
+        display: none;
+      }
+    }
+  }
+
+  &__lista {
+    width: -moz-max-content;
+    width: max-content;
+    display: inline-block;
+
+    ul {
+      .check {
+        font-family: $font-family_2;
+        font-size: 0.8em;
+        font-weight: 400;
+        line-height: 19.07px;
+        text-align: left;
+        list-style: none;
+        margin-bottom: 1.563em;
+        list-style-image: url("../recursos/images/checkbox.png");
+      }
+
+      .none {
+        font-family: $font-family_2;
+        font-size: 0.8em;
+        font-weight: 400;
+        line-height: 19.07px;
+        text-align: left;
+        list-style: none;
+        margin-bottom: 1.563em;
+        list-style-image: url("../recursos/images/cross.png");
+      }
+    }
+  }
+
+  &__boton {
+    position: absolute;
+    bottom: -20px;
+    left: 70px;
+
+    &--basic {
+      color: $color_5;
+      background-color: $background-color_1;
+      min-width: 9.4rem;
+      height: 3.13rem;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 3.13rem;
+      font-size: 0.813em;
+      border-radius: 50px;
+      font-family: $font-family_2;
+      font-weight: 700;
+
+      &:hover {
+        box-shadow: 5px 10px 14px 0px $background-color_1;
+      }
+    }
+
+    &--professional {
+      color: $color_5;
+      background-color: $background-color_2;
+      min-width: 9.4rem;
+      height: 3.13rem;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 3.13rem;
+      font-size: 0.813em;
+      border-radius: 50px;
+      font-family: $font-family_2;
+      font-weight: 700;
+
+      &:hover {
+        box-shadow: 5px 10px 14px 0px $background-color_2;
+      }
+    }
+
+    &--premium {
+      color: $color_5;
+      background-color: $background-color_3;
+      min-width: 9.4rem;
+      height: 3.13rem;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 3.13rem;
+      font-size: 0.813em;
+      border-radius: 50px;
+      font-family: $font-family_2;
+      font-weight: 700;
+
+      &:hover {
+        box-shadow: 5px 10px 14px 0px rgb(33, 59, 51);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:1000px) { 
+  //PRECIOS
+  .precios{
+      &__content{
+          display: grid;
+          grid-template-columns: repeat(3,23.38em);
+          gap: 3.688em;
+          justify-content: center;
+          margin-top: 3.75em;
+          height: 33.25em;
+      }
+      &__titulo{
+          margin-top: 3.569em;
+      }
+  }
+  .precio{
+      width: 23.38em;
+      height: 30.51em;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      &:hover{
+          width: 25.440em;
+          height: 32.94em;
+          transition: width 0.15s ease-out,
+                      height 0.15s ease-out;
+          .precio__boton{
+              left: 133px;
+              cursor: pointer;
+          }
+      }
+      &__content{
+          display: block;
+          width: max-content;
+          height: 7em;
+          margin: 0;
+          &__oferta{
+              margin-top: 0.323em;
+          }
+      }
+      &__boton{
+          left: 112px;
+      }
+      &__lista{
+        display: block;
+        width: max-content;
+        height: 20em;
+        padding-left: 3em;
+        align-content: center;
+          ul{
+              font-size: 0.875em;
+              line-height: 1.192em;
+              li{
+                margin-bottom: 2.563em !important;
+              }
+          }
+      }
+  }
+}

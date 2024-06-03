@@ -1,0 +1,211 @@
+@import "./elements/imagenes-config.scss";
+$padding-card: calc(0.99em + .16px);
+.puntos{
+    background-color: rgba(247, 247, 247, 1);
+    width: 100%;
+    //height: auto;
+    padding-top: calc(2.5em + 2px);
+    padding-bottom: 2.63rem;
+}
+.card{
+    width: 19.625em;
+    height: calc(23rem + 2px);
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+    margin-bottom: 2.63rem;
+    border: 1px solid rgba(232, 233, 237, 1);
+    hr{
+        display: none;
+    }
+    &--padding{
+        padding: 1.3125em;//$padding-card;
+    }
+    &__texto{
+        height: 17.525em;
+       // padding: 0 1.25em;
+       &--center{
+        padding: 0 1.25em;
+       }
+    }
+    &--redimension{
+        height: 30.813em;
+        margin-bottom: 0px;
+    }
+    &__imagen{
+        position: relative;
+        width: 192.76px; 
+        height: 127.45px; 
+        margin: 0 auto;
+        margin-bottom: calc(1.4em + 4px);
+        &__uno{
+            @include config-img-superposicion('carac_back','.svg', 127.45px, 127.45px, 1);
+            right: -24px;
+            top: -18px;
+            scale: 0.7 70%;
+        }
+        &__dos{
+            @include config-img-superposicion('macbook','.svg', 192.76px, 109.93px, 2);
+            bottom: 0px;
+        }
+
+        &__uno2{
+            @include config-img-superposicion('carac2_back','.svg', 131.88px, 131.7px, 1);
+            right: 35px;
+        }
+        &__dos2{
+            @include config-img-superposicion('iphone','.svg', 175.76px, 134.99px, 2);
+            bottom: -12px;
+            right: -12px;
+        }
+    }
+    &__imagen2{
+        position: relative;
+        width: 100%;
+        height: 11.188em;
+        background-color: rgba(85, 223, 180, 1);
+        &__uno3{
+            @include config-img-superposicion('trumpet','.svg', 295.73px, 207.72px, 10);
+            left: -18px;
+            bottom: -50px;
+        }
+    }
+
+    &__titulo, &__titulo2, &__titulo3{ //añadir width
+        font : {
+            family: 'Raleway';
+            size: 1.875em;
+            weight: 400;
+        }
+        line-height: 35.22px;
+        text-align: left;
+        margin-bottom: calc(1em + 6.781px);
+        word-wrap: break-word;
+    }
+    &__titulo2,  &__titulo3{
+        margin-bottom: calc(1rem + 2px);
+        span{
+            display: block;
+        }
+    }
+    &__titulo3{
+        margin-top: 1.04em;
+    }
+
+    &__parrafo, &__parrafo2{
+        font : {
+            family: 'Open Sans';
+            weight: 400;
+        };
+        line-height: 21px;
+        text-align: left;     
+    }
+    &__parrafo{
+        font-size: 0.875em;
+        max-width: calc(19.4em - .6px);
+        span{
+            display: block;
+        }
+    }
+    &__parrafo2{
+        width: 17em;
+        font-size: 1em;
+        word-break: break-word;   
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    //PUNTOS
+    .card{
+        width: calc(73.25em - 4px);
+        height: calc(26.125em - 4px);
+        display: grid;
+        grid-template-columns: 55% 45%;
+        align-content: center;
+        justify-content: center;
+        &--redimension{
+            border: none;
+        }
+        &__span{
+            display: inline-block !important;
+        }
+        hr{
+            display: block;
+            width: 20.478em;
+            height: 4px;
+            border: none;
+            margin-top: 4.125em;
+        }
+        &__texto{
+            max-width: 28.5em;
+            max-height: 11.75em;
+            &--center{
+                align-content: center;
+                margin-top: 3em;
+            }
+        }
+        &__separador{
+            &--rojo{
+                background-color: rgba(251, 59, 100, 1);
+            }
+            &--azul{
+                background-color: rgba(8, 166, 228, 1);
+            }
+            &--verde{
+                margin-top: 5.125em !important;
+                background-color: rgba(85, 223, 180, 1);
+            }
+        }
+        &__titulo{
+            font-size: 2.25em;
+        }
+        &--responsive{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        &__parrafo, &__parrafo2{
+            max-width: 28.5em;
+            max-height: 4.125em;
+            font-size: 1em;
+            line-height: 1.375em;
+        }
+
+        &__imagen{
+            &__uno{
+                top: -60px;
+                right: -170px;
+                @include config-img-superposicion('carac_back','.svg', 255px, 255px, 1);
+            }
+            &__dos{
+                right: -130px;
+                top: 0;
+                @include config-img-superposicion('macbook','.svg', 386.44px, 219px, 2);
+            }
+
+            &__uno2{
+                top: -80px;
+                @include config-img-superposicion('carac2_back','.svg', 320px, 320px, 1);
+            }
+            &__dos2{
+                top: -65px;
+                right: -70px;
+                @include config-img-superposicion('iphone','.svg', 426px, 328px, 2);
+            }
+        }
+        &__imagen2{
+            width: 27.5em;
+            height: 25.75em;
+            margin-left: 5.5em;
+            &__uno3{
+                left: 108px;
+                top: 133px;
+                @include config-img-superposicion('trumpet','.svg', 265.73px, 207.72px, 10);
+            }
+        }
+        &--background{
+            background-color: rgba(247, 247, 247, 1);
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import "./elements/imagenes-config.scss";
+
+//variables
+$header-color-border: #C3C3C3;
+$header-color-text: #08A6E4;
+$background-white: #ffff;
+$header-height: calc(4.4rem - 0.4px);  
+$header-margin-horizontal: calc(1vw + 30px); 
+//mixins
+@mixin box-shadown($x, $y, $saturation, $extension, $color){
+    box-shadow: $x $y $saturation $extension $color;
+}
+
+.header{ // cambiar a px, que propiedad?
+  position: relative;
+  width: 100%;
+  height: $header-height;
+  background-color: $background-white;
+  @include box-shadown(0, 0, 4px, 4px, $header-color-border);
+    &__nav{
+        display: none;
+    }
+    &__title{
+        display: inline-block;
+        color: $header-color-text;
+        width: 30%;
+        margin-left: $header-margin-horizontal;
+        line-height: $header-height;
+        font : {
+            size: 2em;
+            family: 'Raleway';
+            weight: 300;
+        }
+    }
+    &__menu{
+        @include config-img('menu','.png',20px, 12px);
+        display: inline-block;
+        position: absolute;
+        top: calc(42% - 1.4px);
+        right: $header-margin-horizontal;
+    }
+}
+
+//NAV
+@media only screen and (min-width:1000px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        &__nav{
+            display: inline-block;
+            width: 80%;
+            font-family: 'Open Sans';
+            font-size: 0.688em;
+            font-weight: 700;
+            line-height: 4.5em;
+            letter-spacing: 3.2799999713897705px;
+            text-align: right;
+            color: rgba(165, 165, 165, 1);
+            ul{
+                li{
+                    display: inline-block;
+                    margin-right: 5.938em;
+                    &:hover{
+                        color: rgba(0, 0, 0, 1);
+                        cursor: pointer;
+                        border-bottom: 4px solid rgba(8, 166, 228, 1);
+                        transition: border-bottom 0.25s ease-out;
+                    }
+                }
+            }
+        }
+        &__menu{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import './elements/button.scss';
+
+$button-text: #fff;
+$main-weight: 400;
+$main-align: center;
+
+.main{
+    width: calc(70% + 10px);
+    height: calc(23vh - 1px);
+    margin: calc(1vh + 90px) auto;
+    margin : {
+        bottom: 3.2rem;
+    }
+}
+
+.main__content-titulo,
+.main__content-parrafo{
+    text-align: $main-align;
+}
+
+.main__content-titulo{
+    margin-bottom: 1.25rem;
+    font : {
+        family: 'Raleway';
+        weight: $main-weight;
+        size: 2.188em;
+    }
+}
+
+.main__content-parrafo{
+    margin-bottom: 1.8rem;
+    font : {
+        family: 'Open Sans';
+        weight: $main-weight;
+        size: 1em;
+    }
+}
+
+.button{
+    font-weight: 700;
+    max-width: calc(28em - 8px);
+    @include button(hsla(197, 93%, 46%, 1), rgba(7, 172, 230, 0.29) , $button-text, 19.4rem, 4.2rem, 1em);
+}
+
+@media only screen and (min-width:1000px) {
+    .button{
+        cursor: pointer;
+        transition: box-shadow 0.15s ease-out;
+    }
+}

@@ -1,0 +1,244 @@
+@import './elements/imagenes-config.scss';
+@import './elements/button.scss';
+$font-color: rgba(0, 0, 0, 1);
+$padding-form: 1.875em;
+.form{
+    width: 100%;
+    padding: 0 $padding-form;
+    margin-bottom: 8.38em;
+    &__titulo{
+        font : {
+            family: 'Raleway';
+            size: 2.5em;
+            weight: 400;
+        }
+        line-height: 57.53px;
+        text-align: left;
+        color: $font-color;
+        margin-top: calc(4rem - 1px);
+        margin-bottom: .3.8rem;
+    }
+    &__parrafo{
+        font : {
+            family: 'Open Sans';
+            size: 1em;
+            weight: 400;
+        }
+        line-height: 22px;
+        text-align: left;
+        color: $font-color;
+        margin-bottom: calc(2.44rem - 1px);
+    }
+
+
+    &__mail, &__telefono{
+        height: 1.8rem;
+        &__info{
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: .47rem;
+            font : {
+                family: 'Open Sans';
+                size: 1em;
+                weight: 600;
+            }
+            line-height: 22px;
+            text-align: left;
+            color: rgba(165, 165, 165, 1);
+        }
+    }
+
+    &__mail{
+        margin-bottom: .64em;
+        &__imagen{
+            display: inline-block;
+            @include config-img('mail', '.svg', 27px, 27px);
+        }
+    }
+
+    &__telefono{
+        &__imagen{
+            display: inline-block;
+            @include config-img('phone', '.svg', 27px, 27px);
+        }
+    }
+
+    &__inputs{
+        margin-top: 3.315rem;
+        width: 100%;
+    }
+
+    &__name{
+        margin-bottom: 2.63rem;
+    }
+    &__email{
+        margin-bottom: 1.938em;
+    }
+    &__name, &__email{
+        &__label, &__input{
+            display: block;
+        }
+        &__label{
+            font : {
+                family: 'Open Sans';
+                size: 0.688em;
+                weight: 600;
+            }
+            line-height: 14.98px;
+            letter-spacing: 3.2799999713897705px;
+            text-align: left;
+            color: rgba(8, 166, 228, 1);
+            margin-bottom: 1.8rem;
+        }
+        &__input{
+            min-width: calc(100% - $padding-form);
+            max-width: 27.5rem;
+            border: none;
+            border-bottom: 1px solid rgba(149, 152, 154, 1);
+            &:active{ 
+                border : {
+                    top: none;
+                    right: none;
+                    left: none;
+                }
+            }
+        }
+    }
+
+    &__checkbox{
+        &__input{
+            display: inline-block;
+            vertical-align: top;
+            width: 24px;
+            height: 24px;
+            margin: 0;
+            //Quitamos estilo
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            //Ponemos estilo sin marcar
+            border: 1px solid rgba(149, 152, 154, 1);
+            border-radius: 0.25em;
+            padding: 6px;
+            &::before{
+                display: block;
+                content: "";
+                width: 12px;
+                height: 11px;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em rgba(8, 166, 228, 1);
+                clip-path: polygon(24% 44%, 0% 55%, 50% 100%, 100% 16%, 100% 2%, 53% 62%);
+            }
+            &:checked::before{
+                transform: scale(1);
+            }
+        }
+        &__label{
+            span{
+                display: block;
+            }
+            width: 74%;
+            height: 9rem;
+            display: inline-block;
+            font : {
+                family: 'Open Sans';
+                size: 0.75em;
+                weight: 400;
+            }
+            line-height: 16.34px;
+            text-align: left;
+            color: rgba(112, 112, 112, 1);
+            margin-left: 0.625em;
+            word-break: break-word;
+        }
+    }
+
+    &__btn{
+        border: none;
+        position: absolute;
+        right: 65px;
+        margin-top: 2.538em !important;
+        @include button(rgba(7, 172, 230, 1)
+        , rgba(7, 172, 230, 1), rgba(255, 255, 255, 1), 17.415em, 4.39em, 0.813em);
+    }
+}
+
+//FORM
+@media only screen and (min-width:1000px) {
+    .form{
+        width: 59.8em;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%; //9.813em 8.875em 4.813em/
+        align-items: baseline;
+        margin-top: 4em;
+        margin-bottom: 5em;
+        &__name, &__email{
+            &__input{
+                width: 100%;
+            }
+        }
+        &__titulo{
+            font-size: 3.063em;
+        }
+        &__mail, &__telefono{
+            display: inline-block;
+        }
+        &__mail{
+            margin-right: 1.25em;
+        }
+        &__contact, &__inputs{
+            display: inline-block;
+        }
+        &__contact{
+            //margin-top: 200px;
+        }
+        &__inputs{
+            width: 27.5em;
+            margin: 0px;
+            display: grid;
+            grid-template: 9.787em 9.164em 3.563em/100%;
+            &__text{
+                align-self: end;
+            }
+        }
+        &__checkbox{
+            width: 33.75em;
+            &__label{
+                width: 33.75em;
+                height: 9.0em;
+                display: inline-block;
+                span{
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+        }
+        &__boton{
+            justify-self: right;
+        }
+        &__btn{
+            position: relative;
+            margin: 0px !important;
+            right: 0;
+            cursor: pointer;
+            transition: box-shadow 0.15s ease-out;
+        }
+    }
+
+    .footer{
+        height: 89px;  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &__imagenes{
+            position: relative;
+            &__twitter, &__facebook{
+                cursor: pointer;
+            }
+        }
+    }
+}
