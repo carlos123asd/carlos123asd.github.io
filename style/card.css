@@ -194,9 +194,9 @@
     line-height: 1.375em;
   }
   .card__imagen__uno {
-    top: -60px;
-    right: -170px;
-    background-image: url(../recursos/images/carac_back.svg);
+    top: -90px;
+    right: -185px;
+    background-image: url(../recursos/images/rectanglered.svg);
     width: 255px;
     height: 255px;
     background-position: center;

@@ -174,9 +174,9 @@ $padding-card: calc(0.99em + .16px);
 
         &__imagen{
             &__uno{
-                top: -60px;
-                right: -170px;
-                @include config-img-superposicion('carac_back','.svg', 255px, 255px, 1);
+                top: -90px;
+                right: -185px;
+                @include config-img-superposicion('rectanglered','.svg', 255px, 255px, 1);
             }
             &__dos{
                 right: -130px;

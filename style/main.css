@@ -27,6 +27,7 @@
 .button {
   font-weight: 700;
   max-width: calc(28em - 8px);
+  min-width: 0px !important;
   color: #fff;
   background-color: hsl(197, 93%, 46%);
   min-width: 19.4rem;
