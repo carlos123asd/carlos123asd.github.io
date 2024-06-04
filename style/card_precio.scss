@@ -298,17 +298,17 @@ $background-color_3: rgb(85, 223, 180);
       }
       &--professional{
         &:hover{
-          transform: translate(-0.938em);
+          transform: translate(-0.938em, -1.5em);
         }
       }
       &--basic{
         &:hover{
-          transform: translate(-0.938em);
+          transform: translate(-0.938em, -1.5em);
         }
       }
       &--premium{
         &:hover{
-          transform: translate(-0.958em);
+          transform: translate(-0.958em, -1.5em);
         }
       }
   }
