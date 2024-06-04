@@ -52,12 +52,20 @@
   .header__nav ul li {
     display: inline-block;
     margin-right: 5.938em;
+    text-transform: uppercase;
   }
   .header__nav ul li:hover {
     color: rgb(0, 0, 0);
     cursor: pointer;
     border-bottom: 4px solid rgb(8, 166, 228);
     transition: border-bottom 0.25s ease-out;
+  }
+  .header__nav ul li a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+  }
+  .header__nav ul li a:visited, .header__nav ul li a:active {
+    color: rgb(165, 165, 165);
   }
   .header__menu {
     display: none;

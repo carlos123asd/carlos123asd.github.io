@@ -59,7 +59,7 @@ $header-margin-horizontal: calc(1vw + 30px);
             @include config-img('twiter','.png',24px, 24px);
         }
         &__facebook{
-            @include config-img('facebook','.png',24px, 24px);
+            @include config-img('linkedin','.png',24px, 24px);
         }
     }
 }

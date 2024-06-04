@@ -240,8 +240,7 @@
   }
   .precio__lista {
     display: block;
-    width: -moz-max-content;
-    width: max-content;
+    width: 8.704em;
     height: 20em;
     padding-left: 3em;
     align-content: center;
@@ -252,5 +251,14 @@
   }
   .precio__lista ul li {
     margin-bottom: 2.563em !important;
+  }
+  .precio--professional:hover {
+    transform: translate(-0.938em);
+  }
+  .precio--basic:hover {
+    transform: translate(-0.938em);
+  }
+  .precio--premium:hover {
+    transform: translate(-0.958em);
   }
 }/*# sourceMappingURL=card_precio.css.map */

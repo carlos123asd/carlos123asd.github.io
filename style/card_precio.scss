@@ -284,7 +284,7 @@ $background-color_3: rgb(85, 223, 180);
       }
       &__lista{
         display: block;
-        width: max-content;
+        width: 8.704em;//139.25px;
         height: 20em;
         padding-left: 3em;
         align-content: center;
@@ -295,6 +295,21 @@ $background-color_3: rgb(85, 223, 180);
                 margin-bottom: 2.563em !important;
               }
           }
+      }
+      &--professional{
+        &:hover{
+          transform: translate(-0.938em);
+        }
+      }
+      &--basic{
+        &:hover{
+          transform: translate(-0.938em);
+        }
+      }
+      &--premium{
+        &:hover{
+          transform: translate(-0.958em);
+        }
       }
   }
 }

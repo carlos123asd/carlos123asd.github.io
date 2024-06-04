@@ -9,15 +9,15 @@
 </head>
 <body>
     <!--NAV-->
-    <header class="header">
+    <header id="nav" class="header">
         <span class="header__title">OXYGENShop</span>
         <div class="header__menu"></div>
         <nav class="header__nav">
             <ul>
-                <li><a>Why Us</a></li>
-                <li><a>Benefits</a></li>
-                <li><a>Prices</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="#whyus">Why Us</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,7 @@
     </main>
 
     <!--CARACTERISTICAS-->
-    <section class="caracteristicas">
+    <section id="whyus" class="caracteristicas">
         <div class="caracteristicas__header"></div>
         <h2 class="caracteristicas__titulo">The&nbsp;most&nbsp;popular&nbsp;sales&nbsp;platform&nbsp;in&nbsp;country</h2>
         
@@ -74,7 +74,7 @@
     </section>
 
     <!--POS-->
-    <section class="puntos">
+    <section id="benefits" class="puntos">
         <div class="card card--padding card--responsive">
             <div class="card__imagen">
                 <div class="card__imagen__uno"></div>
@@ -127,7 +127,7 @@
     </section>
 
     <!--PRECIOS-->
-        <section class="precios"> 
+        <section id="prices" class="precios"> 
             <h2 class="precios__titulo">Pricing</h2>
             <div class="precios__content">
                 <div class="precio precio--basic"><!--class=Preciocontainer-->
@@ -186,19 +186,19 @@
             </div>
         </section>
 
-        <section class="form"> 
+        <section id="contact" class="form"> 
             <div class="form__contact">
                 <h2 class="form__titulo">Any&nbsp;questions?</h2>
                 <p class="form__parrafo">Leave&nbsp;your&nbsp;email&nbsp;address&nbsp;or&nbsp;call&nbsp;us!</p>
                 
                 <div class="form__mail">
                     <div class="form__mail__imagen"></div>
-                    <div class="form__mail__info">info@bestshop.xyz</div>
+                    <div class="form__mail__info">carlos-medin@hotmail.com</div>
                 </div>
                 
                 <div class="form__telefono">
                     <div class="form__telefono__imagen"></div>
-                    <div class="form__telefono__info">123&nbsp;456&nbsp;789</div>
+                    <div class="form__telefono__info">616&nbsp;348&nbsp;947</div>
                 </div>
             </div>
             
@@ -229,16 +229,18 @@
 
         
         <footer class="footer">
-            <div class="footer__texto">
-                <span class="footer__title">OXYGENShop</span>
-                <span class="footer__sub">
-                    ©&nbsp;2022&nbsp;OXYGEN,&nbsp;All&nbsp;Rights&nbsp;Reserved
-                </span>
-            </div>
+            <a href="#nav">
+                <div class="footer__texto">
+                    <span class="footer__title">OXYGENShop</span>
+                    <span class="footer__sub">
+                        ©&nbsp;2022&nbsp;OXYGEN,&nbsp;All&nbsp;Rights&nbsp;Reserved
+                    </span>
+                </div>
+            </a>
             
             <div class="footer__imagenes">
-                <div class="footer__imagenes__twitter"></div>
-                <div class="footer__imagenes__facebook"></div>
+                <a href="https://www.linkedin.com/in/carlosmedinasalas/" target="_blank"><div class="footer__imagenes__twitter"></div></a>
+                <a href="https://www.linkedin.com/in/carlosmedinasalas/" target="_blank"><div class="footer__imagenes__facebook"></div></a>
             </div>
         </footer>
         
