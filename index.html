@@ -7,13 +7,14 @@
     <link type="text/css" href="./style/style.css" rel="stylesheet">
     <link type="text/css" href="./style/query.css" rel="stylesheet">
     <script src="./script/object/menu.js" defer></script>
+    <script src="./script/object/bar.js" defer></script>
 </head>
 <body>
     <!--NAV-->
     <header id="nav" class="header">
         <span class="header__title">OXYGENShop</span>
         <div id="img_menu" class="header__menu"></div>
-        <nav id="nav_content" class="header__nav">
+        <nav id="nav_content" class="header__nav visibility_hidden hide_menu">
             <ul>
                 <li><a href="#whyus">Why Us</a></li>
                 <li><a href="#benefits">Benefits</a></li>
@@ -22,6 +23,9 @@
             </ul>
         </nav>
     </header>
+    <div>
+        <div id="progress" class="bar"></div>
+    </div>
 
     <!--MAIN-->
     <main class="main">
