@@ -18,7 +18,36 @@ $header-margin-horizontal: calc(1vw + 30px);
   background-color: $background-white;
   @include box-shadown(0, 0, 4px, 4px, $header-color-border);
     &__nav{
-        display: none;
+        visibility: hidden;
+        height: 11.96em;
+        opacity: 0;
+        font-family: "Open Sans";
+        font-size: 0.84em;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 3.2799999714px;
+        text-align: left;
+        background-color: white;
+        padding-left: 2em;
+        box-shadow: 0 7px 4px -2px #C3C3C3;
+        transition: opacity .8s ease-out;
+        ul{
+            height: 100%;
+            align-content: center;
+            transform: translateY(20%) rotateX(-30deg);
+            transition: transform .8s ease-out;
+            li{
+                margin-bottom: 1.1em;
+                list-style: none;
+                text-transform: uppercase;
+                a{
+                  text-decoration: none;
+                }
+                a:visited, a:active{
+                    color: rgba(165, 165, 165, 1);
+                }
+            }
+        }
     }
     &__title{
         display: inline-block;
@@ -49,8 +78,11 @@ $header-margin-horizontal: calc(1vw + 30px);
         justify-content: space-between;
         align-items: baseline;
         &__nav{
+            opacity: 1;
+            visibility: visible;
             display: inline-block;
             width: 80%;
+            height: 0;
             font-family: 'Open Sans';
             font-size: 0.688em;
             font-weight: 700;
@@ -63,8 +95,8 @@ $header-margin-horizontal: calc(1vw + 30px);
                     display: inline-block;
                     margin-right: 5.938em;
                     text-transform: uppercase;
+                    line-height: 6.2em;
                     &:hover{
-                        color: rgba(0, 0, 0, 1);
                         cursor: pointer;
                         border-bottom: 4px solid rgba(8, 166, 228, 1);
                         transition: border-bottom 0.25s ease-out;
