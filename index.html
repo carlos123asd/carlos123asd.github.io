@@ -8,6 +8,7 @@
     <link type="text/css" href="./style/query.css" rel="stylesheet">
     <script src="./script/object/menu.js" defer></script>
     <script src="./script/object/bar.js" defer></script>
+    <script type="module" src="./script/object/select.js" defer></script>
 </head>
 <body>
     <!--NAV-->
@@ -131,9 +132,14 @@
         </div>
     </section>
 
-    <!--PRECIOS-->
+    <!-- PRECIOS //EUR, USD, GBP -->
         <section id="prices" class="precios"> 
             <h2 class="precios__titulo">Pricing</h2>
+            <select class="precios__unidades" id="unidad_precio">
+                <!--<option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>-->
+            </select>
             <div class="precios__content">
                 <div class="precio precio--basic"><!--class=Preciocontainer-->
                     <div class="precio__content"><!--Precio Standar-->

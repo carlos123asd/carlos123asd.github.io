@@ -18,7 +18,9 @@ $header-margin-horizontal: calc(1vw + 30px);
     align-content: center;
     text-align-last: justify;
   @include box-shadown(0, -5px, 40px, 0px, $footer-color-border);
-
+    a{
+        text-decoration: none;
+    }
     &__texto, &__imagenes{
         display: inline-block;
     }

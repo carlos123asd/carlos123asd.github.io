@@ -11,6 +11,7 @@ $background-color_3: rgb(85, 223, 180);
 
 .precios {
   width: 100%;
+  text-align: center;
 
   &__titulo {
     font-family: $font-family_1;
@@ -20,6 +21,17 @@ $background-color_3: rgb(85, 223, 180);
     text-align: center;
     margin-bottom: calc(0.9rem - 0.4px);
     margin-top: 2.63rem;
+  }
+  
+  &__unidades{
+    border-radius: 1em;
+    padding: .5em 1em;
+    margin-bottom: 1.5em;
+    border: 1px solid rgb(7, 172, 230);
+    background-color: rgb(7, 172, 230);
+    color: white;
+    border: 1px solid (232, 233, 237, 1);
+    text-transform: uppercase;
   }
 }
 

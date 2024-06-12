@@ -1,5 +1,6 @@
 .precios {
   width: 100%;
+  text-align: center;
 }
 .precios__titulo {
   font-family: "Raleway";
@@ -9,6 +10,16 @@
   text-align: center;
   margin-bottom: calc(0.9rem - 0.4px);
   margin-top: 2.63rem;
+}
+.precios__unidades {
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  margin-bottom: 1.5em;
+  border: 1px solid rgb(7, 172, 230);
+  background-color: rgb(7, 172, 230);
+  color: white;
+  border: 1px solid 232, 233, 237, 1;
+  text-transform: uppercase;
 }
 
 .precio {
