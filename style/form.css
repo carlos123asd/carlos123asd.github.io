@@ -170,6 +170,9 @@
   .form__name__input, .form__email__input {
     width: 100%;
   }
+  .form__name__input:focus, .form__email__input:focus {
+    outline: none;
+  }
   .form__titulo {
     font-size: 3.063em;
   }

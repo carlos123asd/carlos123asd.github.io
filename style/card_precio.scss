@@ -32,6 +32,9 @@ $background-color_3: rgb(85, 223, 180);
     color: white;
     border: 1px solid (232, 233, 237, 1);
     text-transform: uppercase;
+    &:focus{
+      outline: none;
+    }
   }
 }
 
@@ -265,20 +268,18 @@ $background-color_3: rgb(85, 223, 180);
       }
   }
   .precio{
-      width: 23.38em;
-      height: 30.51em;
+      width: 23.38em !important;
+      height: 30.51em !important;
       margin: 0;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
       &:hover{
-          width: 25.440em;
-          height: 32.94em;
-          transition: width 0.15s ease-out,
-                      height 0.15s ease-out;
+          transform: scale(1.08);
+          transition: transform 0.15s ease-out;
           .precio__boton{
-              left: 133px;
+              left: 112px;
               cursor: pointer;
           }
       }
@@ -307,21 +308,6 @@ $background-color_3: rgb(85, 223, 180);
                 margin-bottom: 2.563em !important;
               }
           }
-      }
-      &--professional{
-        &:hover{
-          transform: translate(-0.938em, -1.5em);
-        }
-      }
-      &--basic{
-        &:hover{
-          transform: translate(-0.938em, -1.5em);
-        }
-      }
-      &--premium{
-        &:hover{
-          transform: translate(-0.958em, -1.5em);
-        }
       }
   }
 }

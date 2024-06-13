@@ -178,6 +178,9 @@ $padding-form: 1.875em;
         &__name, &__email{
             &__input{
                 width: 100%;
+                &:focus{
+                    outline: none;
+                }
             }
         }
         &__titulo{

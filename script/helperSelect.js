@@ -37,4 +37,21 @@ const setOptionsSelect = (date) => {
     });
 }
 
-export {getKeysDates,getIndexsDates,getValuesDates,setOptionsSelect};
+const setValues = (values,type = 'eur') => {//precio__content__eur
+    const select = document.getElementsByClassName('precio__content__eur');
+    if(type === 'eur'){//1
+        select[0].innerHTML = `€${values[0] * 0}`; 
+        select[1].innerHTML = `€${values[0] * 25}`;
+        select[2].innerHTML = `€${values[0] * 60}`;
+    }else if(type === 'gbp'){//0.84
+        select[0].innerHTML = `£${Math.floor(values[1] * 0)}`;
+        select[1].innerHTML = `£${Math.floor(values[1] * 25)}`;
+        select[2].innerHTML = `£${Math.floor(values[1] * 60)}`;
+    }else if(type === 'usd'){//1.08
+        select[0].innerHTML = `$${Math.floor(values[2] * 0)}`;
+        select[1].innerHTML = `$${Math.floor(values[2] * 25)}`;
+        select[2].innerHTML = `$${Math.floor(values[2] * 60)}`;
+    }
+};
+
+export {getKeysDates,getIndexsDates,getValuesDates,setOptionsSelect,setValues};

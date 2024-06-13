@@ -126,7 +126,6 @@
     display: inline-block;
     margin-right: 5.938em;
     text-transform: uppercase;
-    line-height: 6.2em;
   }
   .header__nav ul li:hover {
     cursor: pointer;

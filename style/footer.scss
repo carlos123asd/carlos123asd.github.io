@@ -69,8 +69,12 @@ $header-margin-horizontal: calc(1vw + 30px);
 @media only screen and (min-width:1000px) {
     .footer{
         &__imagenes{
-            &__twitter:hover, &__facebook:hover{
+            &__twitter, &__facebook{
                 scale: 1.1;
+                transition: scale 0.25s ease-out;
+            }
+            &__twitter:hover, &__facebook:hover{
+                scale: 1.2;
                 transition: scale 0.25s ease-out;
             }
         }

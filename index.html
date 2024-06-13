@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" href="./style/style.css" rel="stylesheet">
-    <link type="text/css" href="./style/query.css" rel="stylesheet">
     <script src="./script/object/menu.js" defer></script>
     <script src="./script/object/bar.js" defer></script>
     <script type="module" src="./script/object/select.js" defer></script>
+    <script src="./script/object/btnup.js" defer></script>
 </head>
 <body>
     <!--NAV-->
@@ -26,6 +26,11 @@
     </header>
     <div>
         <div id="progress" class="bar"></div>
+    </div>
+
+    <!--boton up-->
+    <div id="btnup" class="btnup">
+        <div class="btnup__img"></div>
     </div>
 
     <!--MAIN-->
@@ -135,10 +140,7 @@
     <!-- PRECIOS //EUR, USD, GBP -->
         <section id="prices" class="precios"> 
             <h2 class="precios__titulo">Pricing</h2>
-            <select class="precios__unidades" id="unidad_precio">
-                <!--<option value="EUR">EUR</option>
-                <option value="USD">USD</option>
-                <option value="GBP">GBP</option>-->
+            <select class="precios__unidades" id="unidad_precio"> <!--SELECT UNIDADES-->
             </select>
             <div class="precios__content">
                 <div class="precio precio--basic"><!--class=Preciocontainer-->

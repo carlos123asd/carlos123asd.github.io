@@ -1,0 +1,36 @@
+@import './elements/imagenes-config.scss';
+.btnup{
+    width: 2.6rem;
+    height: 4.5rem;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background-color: rgba(8, 166, 228, 1);
+    position: fixed;
+    right: 0;
+    bottom: 120px;
+    z-index: 1000;
+    align-content: center;
+    transition: opacity .4s ease-out;
+    &__img{
+        @include config-img('arrowup', '.svg', 40px, 40px);
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .btnup{
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 2.2em;
+    scale: 1;
+    transition: scale .4s ease-out;
+    transition: opacity .4s ease-out;
+        &:hover{
+            scale: 1.1;
+            transition: scale .4s ease-out;
+            cursor: pointer;
+        }
+    }
+}
+    

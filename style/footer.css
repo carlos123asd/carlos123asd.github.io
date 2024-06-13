@@ -59,8 +59,12 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .footer__imagenes__twitter:hover, .footer__imagenes__facebook:hover {
+  .footer__imagenes__twitter, .footer__imagenes__facebook {
     scale: 1.1;
+    transition: scale 0.25s ease-out;
+  }
+  .footer__imagenes__twitter:hover, .footer__imagenes__facebook:hover {
+    scale: 1.2;
     transition: scale 0.25s ease-out;
   }
 }/*# sourceMappingURL=footer.css.map */
