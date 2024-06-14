@@ -6,6 +6,21 @@ $padding-form: 1.875em;
     width: 100%;
     padding: 0 $padding-form;
     margin-bottom: 8.38em;
+
+    //clases tratadas con JS: border_rojo
+    .border_red{
+        border-bottom: 1px solid rgb(235, 71, 110);
+    }
+    .border_green{
+        border-bottom: 1px solid rgb(85, 223, 180);
+    }
+    .border_red_complete{
+        border: 1px solid rgb(235, 71, 110);
+    }
+    .border_green_complete{
+        border: 1px solid rgb(85, 223, 180);
+    }
+
     &__titulo{
         font : {
             family: 'Raleway';
@@ -67,6 +82,22 @@ $padding-form: 1.875em;
     &__inputs{
         margin-top: 3.315rem;
         width: 100%;
+        &__message{
+            display: block;
+            width: 100%;
+            height: 2.5em;
+            background-color: rgba(8, 166, 228, 1);
+            border-end-end-radius: 1em;
+            border-top-right-radius: 1em;
+            color: #fff;
+            font-family: 'Open Sans';
+            font-size: 1em;
+            font-weight: 700;
+            text-align: left;
+            align-content: center;
+            margin-bottom: 1.2em;
+            padding-left: .3em;
+        }
     }
 
     &__name{
@@ -195,9 +226,7 @@ $padding-form: 1.875em;
         &__contact, &__inputs{
             display: inline-block;
         }
-        &__contact{
-            //margin-top: 200px;
-        }
+
         &__inputs{
             width: 27.5em;
             margin: 0px;
@@ -205,6 +234,9 @@ $padding-form: 1.875em;
             grid-template: 9.787em 9.164em 3.563em/100%;
             &__text{
                 align-self: end;
+            }
+            &__message{
+                margin-bottom: 0;
             }
         }
         &__checkbox{

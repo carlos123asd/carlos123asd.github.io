@@ -1,4 +1,4 @@
-const getKeysDates = (dates) => {
+const getKeysDates = (dates) => { //ver filter
     //keys
     const arraydateskey = Object.keys(dates);
     const keysfilters = arraydateskey.filter(item => {
@@ -6,7 +6,7 @@ const getKeysDates = (dates) => {
     });
     return keysfilters;
 }
-const getIndexsDates = (dates) => {
+const getIndexsDates = (dates) => { //ver filter
     //index
     const indexdates = [];
     const arraydateskey = Object.keys(dates);
@@ -17,7 +17,7 @@ const getIndexsDates = (dates) => {
     });
     return indexdates;
 }
-const getValuesDates = (dates,indexs) => { //require getindexdates
+const getValuesDates = (dates,indexs) => { //require getindexdates   /ver Map
     //values
     const arraydatesvalues = Object.values(dates);
     const valuesfilters = [];

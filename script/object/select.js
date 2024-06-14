@@ -5,8 +5,8 @@ import { getIndexsDates } from '../helperSelect.js';
 import { getValuesDates } from '../helperSelect.js';
 import { setOptionsSelect } from '../helperSelect.js';
 import { setValues } from '../helperSelect.js';
-const exist = false;
-const getDates = async () => {
+
+const getDates = async () => { //dates - getcurrencydata
     try{
         const response = await fetch(uri);
         if(response.ok){
@@ -27,7 +27,7 @@ const filterDates = (dates) => {
     const indexs = getIndexsDates(dates)
     const values = getValuesDates(dates,indexs)
     setOptionsSelect(keys);
-    setValues(values); //DUDA: COMO LLAMO A ESTA FUNCION SEGUN EL EVENTO CAMBIANTE DEL SELECT
+    setValues(values); 
 }
 
 select.addEventListener('change', async () => { 

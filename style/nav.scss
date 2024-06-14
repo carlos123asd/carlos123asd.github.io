@@ -10,18 +10,6 @@ $header-margin-horizontal: calc(1vw + 30px);
 @mixin box-shadown($x, $y, $saturation, $extension, $color){
     box-shadow: $x $y $saturation $extension $color;
 }
-//clases manejadas con js
-/*
-.img_close{
-    background-image: url('../recursos/images/close.png');
-    width: 15.56px;
-    height: 15.56px;
-}
-.img_burguer{
-    background-image: url('../recursos/images/menu.png');
-    width: 20px;
-    height: 12px;
-}*/
 .visibility_hidden{
     visibility: hidden;
 }
@@ -98,11 +86,13 @@ $header-margin-horizontal: calc(1vw + 30px);
     }
 }
 .bar{
-    width: 100%;
-    height: 10px;
-    background-color: rgba(8, 166, 228, 1);
-    position: fixed;
-    z-index: 1000;
+    &__progress{
+        position: fixed;
+        width: 100%;
+        height: 10px;
+        background-color: rgba(8, 166, 228, 1);
+        z-index: 1000;
+    }
 }
 
 //NAV
