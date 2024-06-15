@@ -1,9 +1,2 @@
-
- ● Crear un popup (/modal) de ‘Subscribe to our newsletter’ que aparece
- después de 5 segundos, o cuando el usuario baja 25% de la página. Validar
- la dirección y mandársela al mismo servidor. Habrá 3 maneras de quitarlo,
- con un botón X, haciendo clic fuera del modal o con la tecla ESC. No
- aparecerá otra vez, después de ser cerrado (con
- localStorage/sessionStorage).
- ● Crear un ‘Slider’ con esta funcionalidad (botones prev/next, puntos para las
+● Crear un ‘Slider’ con esta funcionalidad (botones prev/next, puntos para las
  imágenes individuales, avanza automáticamente)

@@ -10,6 +10,7 @@
     <script type="module" src="./script/object/select.js" defer></script>
     <script src="./script/object/btnup.js" defer></script>
     <script src="./script/helperForm.js" defer></script>
+    <script src="./script/object/popup.js" defer></script>
 </head>
 <body>
     <!--NAV-->
@@ -47,6 +48,27 @@
     <div id="btnup" class="btnup">
         <div class="btnup__img"></div>
     </div>
+
+    <!--Pop up-->
+    <div class="popup">
+        <div id="closepopup" class="popup__close"></div>
+        <div>
+            <span>Join our Newsletter</span>
+            <h2>Subscribe<br>Now !</h2>
+            <p>Never miss latest discount & special offers on your email.</p>
+        </div>
+        <div class="popup__inputs">
+            <div class="popup__inputs__content">
+                <input type="text" id="emailsubs" class="popup__inputs__content__email">
+                <span id="message_subs"></span>
+            </div>
+            <div id="btnsubs" class="popup__inputs__contbtn">
+                <div class="popup__inputs__contbtn__img"></div>
+            </div>
+        </div>
+    </div>
+    
+
 
     <!--MAIN-->
     <main class="main">

@@ -55,7 +55,7 @@ form.addEventListener('submit',(form) => { //mostrar todo los mensajes de error 
     let message_email = document.getElementById("message_email");
     
     setTimeout(() => {
-        if(nombre.value === "" || email.value === "" || /[^a-zA-Z]/.test(nombre.value) || nombre.value.length < 2 
+        if(nombre.value === "" || email.value === "" || /[^a-zA-Z\s*]/.test(nombre.value) || nombre.value.length < 2 
         || (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email.value)) === false || !checkbox.checked){
             //VALIDACION DUO VACIO
             if(nombre.value === "" || email.value === ""){ 
@@ -81,7 +81,7 @@ form.addEventListener('submit',(form) => { //mostrar todo los mensajes de error 
                 } 
             }else{
                 //VALIDACION NOMBRE
-                    if(/[^a-zA-Z]/.test(nombre.value)){
+                    if(/[^a-zA-Z\s*]/.test(nombre.value)){
                         message_nombre.innerText = 'El campo nombre solo admite letras';
                         if(nombre.classList.contains('border_green')){
                             nombre.classList.remove('border_green');
