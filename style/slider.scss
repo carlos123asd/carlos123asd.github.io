@@ -1,0 +1,66 @@
+@import '../style/elements/imagenes-config.scss';
+.slider{
+    position: relative;
+    width: 80%;
+    height: 22em;
+    margin: 0 auto;
+    &__btns{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &__back,&__next{
+            position: absolute;
+            top: 45%;
+            border-radius: 50%;
+            transition: scale .8s ease-out;
+            &:hover{
+                scale: 1.2;
+            }
+        }
+        &__back{
+            @include config-img('back', '.svg', 40px, 40px);
+        }
+        &__img{
+            @include config-img('top-banner', '.jpg', 100%, 100%);
+        }
+        &__next{
+            @include config-img('next', '.svg', 40px, 40px);
+            right: 0%;
+        }
+    }
+
+    &__circle{
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        bottom: 0;
+        text-align: center;
+        text-align: -webkit-center;
+        text-align: -ms-center;
+        text-align: -moz-center;
+        background-color: black;
+        opacity: 0.08;
+        align-content: center;
+        &--standar{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: #fff;
+            background-color: #fff;
+        }
+        &--disable{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: #fff;
+            background-color: #888;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .slider{
+        height: 40em;
+        width: 50%;
+    }
+}
