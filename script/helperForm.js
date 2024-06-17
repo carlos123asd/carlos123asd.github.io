@@ -24,7 +24,7 @@ const mostrarNotificacionesError = () => {
 }
 
 const mostrarNotificacionSuccess = (tag) => {
-    tag.textContent = 'Subscripcion enviado correctamente';
+    tag.textContent = 'Contacto enviado correctamente';
     tag.classList.add('notificaciones__message');
     notificaciones.classList.add('notificaciones--enviado');
     message.innerText = "";
@@ -47,93 +47,86 @@ const mostrarNotificacionSuccess = (tag) => {
 
 
 form.addEventListener('submit',(form) => {
-
     form.preventDefault()
     let checkbox = document.getElementById("check");
     let message_nombre = document.getElementById("message_nombre");
     let message_email = document.getElementById("message_email");
-    let validationAll = true;
 
-    //VALIDACION NOMBRE
-    if(form.target.nombre.value === ""){
-        form.target.nombre.placeholder = 'El campo nombre es necesario';
-        if(form.target.nombre.classList.contains('border_green')){
-            form.target.nombre.classList.remove('border_green');
-        }
-        if(message_nombre.innerText != ""){
-            message_nombre.innerText = "";
-        }
-        form.target.nombre.classList.add('border_red');
-        validationAll = false;
-    }else{
-        if(/[^a-zA-Z\s*]/.test(form.target.nombre.value)){
-            message_nombre.innerText = 'El campo nombre solo admite letras';
+    if(form.target.nombre.value === "" || form.target.email.value === "" || /[^a-zA-Z\s*]/.test(form.target.nombre.value) 
+        || (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(form.target.email.value)) === false || !checkbox.checked){
+        //VALIDACION NOMBRE
+        if(form.target.nombre.value === ""){
+            form.target.nombre.placeholder = 'El campo nombre es necesario';
             if(form.target.nombre.classList.contains('border_green')){
                 form.target.nombre.classList.remove('border_green');
             }
-            form.target.nombre.classList.add('border_red');
-            validationAll = false;
-        }else if(form.target.nombre.value.length < 2){
-            message_nombre.innerText = 'El nombre tiene que tener un minimo de 2 letras'
-            if(form.target.nombre.classList.contains('border_green')){
-                form.target.nombre.classList.remove('border_green');
+            if(message_nombre.innerText != ""){
+                message_nombre.innerText = "";
             }
             form.target.nombre.classList.add('border_red');
-            validationAll = false;
         }else{
-            if(form.target.nombre.classList.contains('border_red')){
-                form.target.nombre.classList.remove('border_red');
+            if(/[^a-zA-Z\s*]/.test(form.target.nombre.value)){
+                message_nombre.innerText = 'El campo nombre solo admite letras';
+                if(form.target.nombre.classList.contains('border_green')){
+                    form.target.nombre.classList.remove('border_green');
+                }
+                form.target.nombre.classList.add('border_red');
+            }else if(form.target.nombre.value.length < 2){
+                message_nombre.innerText = 'El nombre tiene que tener un minimo de 2 letras'
+                if(form.target.nombre.classList.contains('border_green')){
+                    form.target.nombre.classList.remove('border_green');
+                }
+                form.target.nombre.classList.add('border_red');
+            }else{
+                if(form.target.nombre.classList.contains('border_red')){
+                    form.target.nombre.classList.remove('border_red');
+                }
+                form.target.nombre.classList.add('border_green');
+                message_nombre.innerText = 'Nombre Correcto'
             }
-            form.target.nombre.classList.add('border_green');
-            message_nombre.innerText = 'Nombre Correcto'
-            validationAll = true;
         }
-    }
-    // y CORREO
-    if(form.target.email.value === ""){
-        form.target.email.placeholder = 'El campo email es necesario'; 
-        if(form.target.email.classList.contains('border_green')){
-            form.target.email.classList.remove('border_green');
-        }
-        if(message_email.innerText != ""){
-            message_email.innerText = "";
-        }
-        form.target.email.classList.add('border_red');
-        validationAll = false;
-    }else{
-        if((/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(form.target.email.value)) === true ){
-            message_email.innerText = 'Correo valido';
-            if(form.target.email.classList.contains('border_red')){
-                form.target.email.classList.remove('border_red');
-            }
-            form.target.email.classList.add('border_green');
-            validationAll = true;
-        }else{
-            message_email.innerText = 'Correo no valido';
+        // y CORREO
+        if(form.target.email.value === ""){
+            form.target.email.placeholder = 'El campo email es necesario'; 
             if(form.target.email.classList.contains('border_green')){
                 form.target.email.classList.remove('border_green');
             }
+            if(message_email.innerText != ""){
+                message_email.innerText = "";
+            }
             form.target.email.classList.add('border_red');
-            validationAll = false;
+        }else{
+            if((/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(form.target.email.value)) === true ){
+                message_email.innerText = 'Correo valido';
+                if(form.target.email.classList.contains('border_red')){
+                    form.target.email.classList.remove('border_red');
+                }
+                form.target.email.classList.add('border_green');
+            }else{
+                message_email.innerText = 'Correo no valido';
+                if(form.target.email.classList.contains('border_green')){
+                    form.target.email.classList.remove('border_green');
+                }
+                form.target.email.classList.add('border_red');
+            }
         }
-    }
 
-    //CHECK
-    if(!checkbox.checked){
-        if(checkbox.classList.contains('border_green_complete')){
-            checkbox.classList.remove('border_green_complete');
+        //CHECK
+        if(!checkbox.checked){
+            if(checkbox.classList.contains('border_green_complete')){
+                checkbox.classList.remove('border_green_complete');
+            }
+            checkbox.classList.add('border_red_complete'); 
+        }else{
+            if(checkbox.classList.contains('border_red_complete')){
+                checkbox.classList.remove('border_red_complete');
+            }
+            checkbox.classList.add('border_green_complete');
         }
-        checkbox.classList.add('border_red_complete'); 
-        validationAll = false
-    }else{
-        if(checkbox.classList.contains('border_red_complete')){
-            checkbox.classList.remove('border_red_complete');
-        }
-        checkbox.classList.add('border_green_complete');
-        validationAll = true
-    }
 
-    if(validationAll){
+        mostrarNotificacionesError();
+    }
+    else{
         // nombre, email //https://retool.com/api-generator
         const values = {
             nombre: form.target.nombre.value,
@@ -153,11 +146,8 @@ form.addEventListener('submit',(form) => {
         }).then(jsondatos => {
             console.log(jsondatos);
             mostrarNotificacionSuccess(document.createElement('h3'));
-            
         }).catch((error) => {
             console.log(error);
         })
-    }else{
-        mostrarNotificacionesError();
     }
 });
