@@ -3,10 +3,10 @@
   position: fixed;
   width: 100%;
   height: 13em;
-  background-color: rgb(235, 71, 110);
+  background-color: #F43F5E;
   top: 10px;
   z-index: 900;
-  border-bottom-right-radius: 5em;
+  border-radius: 1em;
 }
 .notificaciones--show {
   opacity: 1;
@@ -26,21 +26,29 @@
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 0.9em;
-  color: black;
+  color: white;
   padding: 1em;
   padding-left: 2em;
 }
 .notificaciones__message h3 {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.8em;
+}
+.notificaciones__message h3 span {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 0.5em;
+  background-image: url(../recursos/images/information.svg);
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .notificaciones__message ul li {
   margin-bottom: 0.5em;
 }
 
 @media only screen and (min-width: 1000px) {
-  .notificaciones {
-    border-bottom-right-radius: 8em;
-  }
   .notificaciones__message h3 {
     margin-bottom: 1em;
   }

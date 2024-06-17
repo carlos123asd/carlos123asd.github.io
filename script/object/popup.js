@@ -18,22 +18,24 @@ document.getElementById('btnsubs').addEventListener('click',() => {
             }
         }).then(jsondatos => {
             console.log("Subscripcion: "+jsondatos);
+            displayNonePopUp();
         })
-        //
     }else{
-        document.getElementById('message_subs').innerText = 'Correo no valido';
+        document.getElementById('message_subs').innerText = 'Correo no valido'; 
+        if(!document.getElementById('emailsubs').classList.contains('popup__inputs__content--error')){
+            document.getElementById('emailsubs').classList.add('popup__inputs__content--error');
+            document.getElementById('message_subs').classList.add('popup__inputs__content--msgerror')
+        }
     }
 });
  //close button
 document.getElementById('closepopup').addEventListener('click', () => {
-    document.querySelector('.popup').style.display = 'none';
-    sessionStorage.setItem("popup", true);
+    displayNonePopUp()
 });
 //close out
 window.addEventListener('click',(event) => {
     if (!document.querySelector('.popup').contains(event.target)){
-        document.querySelector('.popup').style.display = 'none';
-        sessionStorage.setItem("popup", true);
+        displayNonePopUp();
     }
 });
 //Muestra despues de 5 seg y evalua en sessionStorage
@@ -42,3 +44,8 @@ if(sessionStorage.getItem('popup') === null){
         document.querySelector('.popup').style.display = 'block'
     },5000);
 }
+
+const displayNonePopUp = () => {
+    document.querySelector('.popup').style.display = 'none';
+    sessionStorage.setItem("popup", true);
+};

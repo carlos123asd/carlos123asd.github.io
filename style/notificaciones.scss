@@ -1,13 +1,13 @@
+@import '../style/elements/imagenes-config.scss';
 .notificaciones{
     display: none;
-    //opacity: 0;*/
     position: fixed;
     width: 100%;
     height: 13em;
-    background-color:rgb(235, 71, 110);
+    background-color:#F43F5E;
     top: 10px;
     z-index: 900;
-    border-bottom-right-radius: 5em;
+    border-radius: 1em;
     &--show{
         opacity: 1;
         transition: opacity 1s ease-out;
@@ -26,11 +26,17 @@
         font-family: 'Open Sans';
         font-weight: 400;
         font-size: .9em;
-        color: black;
+        color: white;
         padding: 1em;
         padding-left: 2em;
         h3{
-            margin-bottom: .2em;
+            margin-bottom: 0.8em;
+            span{
+                display: inline-block;
+                vertical-align: text-top;
+                margin-right: .5em;
+                @include config-img('information', '.svg', 20px, 20px);
+            }
         }
         ul{
             li{
@@ -43,7 +49,6 @@
 @media only screen and (min-width: 1000px) {
     
     .notificaciones{
-        border-bottom-right-radius: 8em;
         &__message{
             h3{
                 margin-bottom: 1em;
