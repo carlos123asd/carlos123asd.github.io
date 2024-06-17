@@ -34,6 +34,7 @@
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  transition: all 1s ease-out;
 }
 .slider__btns__next {
   background-image: url(../recursos/images/next.svg);

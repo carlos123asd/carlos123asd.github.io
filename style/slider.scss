@@ -28,6 +28,7 @@
             background-position: center !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
+            transition: all 1s ease-out;
         }
         &__next{
             @include config-img('next', '.svg', 40px, 40px);
