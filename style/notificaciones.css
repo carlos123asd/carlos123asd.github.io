@@ -6,7 +6,8 @@
   background-color: #F43F5E;
   top: 10px;
   z-index: 900;
-  border-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 .notificaciones--show {
   opacity: 1;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OXYGENShop</title>
     <link type="text/css" href="./style/style.css" rel="stylesheet">
     <script src="./script/object/menu.js" defer></script>
     <script src="./script/object/bar.js" defer></script>
@@ -11,6 +11,7 @@
     <script src="./script/object/btnup.js" defer></script>
     <script src="./script/helperForm.js" defer></script>
     <script src="./script/object/popup.js" defer></script>
+    <script src="./script/object/slider.js" defer></script>
 </head>
 <body>
     <!--NAV-->
@@ -146,7 +147,7 @@
                 <div class="card__imagen__dos2"></div>
             </div>
             <div class="card__texto">
-                <h2 class="card__titulo2"><span>Your&nbsp;shop&nbsp;is</span><span>Where&nbsp;you&nbsp;are!</span></h2>
+                <h2 class="card__titulo2">Your&nbsp;shop&nbsp;is<br>Where&nbsp;you&nbsp;are!</h2>
                 <p class="card__parrafo">
                     Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur
                     <span>adipiscing&nbsp;elit,&nbsp;sed&nbsp;do&nbsp;eiusmod&nbsp;tempor</span>
@@ -159,7 +160,7 @@
 
         <div class="card card--redimension">
             <div class="card__texto card__texto--center">
-                <h2 class="card__titulo3"><span class="card__span">Increase</span><span class="card__span">&nbsp;recognition&nbsp;your</span><span>brand!</span></h2>
+                <h2 class="card__titulo3">Increase<br>recognition&nbsp;your<br>brand!</h2>
                 <p class="card__parrafo2">
                     Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit,&nbsp;sed&nbsp;do&nbsp;eiusmod&nbsp;tempor&nbsp;incididunt&nbsp;ut&nbsp;labore&nbsp;et&nbsp;dolore&nbsp;magna&nbsp;aliqua.&nbsp;Ut&nbsp;enim&nbsp;ad&nbsp;minim&nbsp;veniam.
                 </p>
@@ -236,15 +237,14 @@
             </div>
         </section>
 
-        <!--SLIDER   slider__circle--disable-->
+        <!--SLIDER slider__circle--standar slider__circle--disable-->
         <div class="slider">
             <div class="slider__btns">
-                <div class="slider__btns__back"></div>
-                <div class="slider__btns__img"></div>
-                <div class="slider__btns__next"></div>
+                <div id="sliderbtnback" class="slider__btns__back"></div>
+                <div id="sliderimgcontent" class="slider__btns__img"></div>
+                <div id="sliderbtnnext" class="slider__btns__next"></div>
             </div>
             <div class="slider__circle">
-                <div class="slider__circle--standar"></div> 
             </div>
         </div>
 

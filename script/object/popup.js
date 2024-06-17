@@ -1,5 +1,7 @@
 //https://retoolapi.dev/i6orit/OxygenShopSubs
 const email = document.getElementById('emailsubs');
+const notificacionessub = document.getElementById("notificaciones");
+const messagesub = document.querySelector('.notificaciones__message');
 
 document.getElementById('btnsubs').addEventListener('click',() => {
     if((/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email.value)) === true){
@@ -18,6 +20,7 @@ document.getElementById('btnsubs').addEventListener('click',() => {
             }
         }).then(jsondatos => {
             console.log("Subscripcion: "+jsondatos);
+            mostrarNotificacionSucces(document.createElement('h3'));
             displayNonePopUp();
         })
     }else{
@@ -49,3 +52,26 @@ const displayNonePopUp = () => {
     document.querySelector('.popup').style.display = 'none';
     sessionStorage.setItem("popup", true);
 };
+
+
+const mostrarNotificacionSucces = (tag) => {
+    tag.textContent = 'Subscripción enviado correctamente';
+    tag.classList.add('notificaciones__message');
+    notificacionessub.classList.add('notificaciones--enviado');
+    messagesub.innerText = "";
+    messagesub.appendChild(tag);
+    notificacionessub.style.display = "block";
+    setTimeout(()=>{
+        notificacionessub.classList.remove('notificaciones--hide');
+        notificacionessub.classList.add('notificaciones--show');
+    },500);
+    setTimeout(() => {
+        if(notificacionessub.style.display === 'block'){
+            notificacionessub.classList.remove('notificaciones--show');
+            notificacionessub.classList.add('notificaciones--hide');
+            setTimeout(() => {
+                notificacionessub.style.display = "none";
+            },1000);
+        }
+    },8000);
+}
