@@ -80,7 +80,7 @@ form.addEventListener('submit',(form) => {
                 switchNotificationError(form.target.nombre)
             }else{
                 switchNotificationSuccess(form.target.nombre)
-                message_nombre.innerText = 'Nombre Correcto'
+                message_nombre.innerText = 'Nombre Valido'
             }
         }
         // VALIDACION CORREO
@@ -134,7 +134,7 @@ form.addEventListener('submit',(form) => {
             }
         }).then(jsondatos => {
             console.log(jsondatos);
-            mostrarNotificacionSuccess(document.createElement('h3'),'Contacto enviado correctamente');
+            mostrarNotificacionSuccess(document.createElement('h3'),'Tu solicitud se ha enviado correctamente, en breve nos pondremos en contacto contigo');
             cleanInputs();
         }).catch((error) => {
             console.log(error);
