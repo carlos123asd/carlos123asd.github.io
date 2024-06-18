@@ -67,3 +67,16 @@ document.getElementById('sliderbtnnext').addEventListener('click',event => {
 document.getElementById('sliderbtnback').addEventListener('click',event => {
     slider.setImgBack();
 });
+
+//Slider automatico
+let adelante = setInterval(() => {
+    slider.setImgNext();
+        if(slider.index === (slider.imagenes.length -1)){
+          let atras = setInterval(() => {
+                slider.setImgBack();
+                if(slider.index === 0){
+                    clearInterval(atras);
+                }
+            },2500);
+        }
+},2500);

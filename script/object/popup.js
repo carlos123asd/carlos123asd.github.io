@@ -1,5 +1,8 @@
 //https://retoolapi.dev/i6orit/OxygenShopSubs
+import { mostrarNotificacionSuccess } from '../helperNotification.js';
+
 const email = document.getElementById('emailsubs');
+
 
 document.getElementById('btnsubs').addEventListener('click',() => {
     if((/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email.value)) === true){
@@ -18,6 +21,7 @@ document.getElementById('btnsubs').addEventListener('click',() => {
             }
         }).then(jsondatos => {
             console.log("Subscripcion: "+jsondatos);
+            mostrarNotificacionSuccess(document.createElement('h3'),'¡Gracias por su subscripcion en OxygenShop!');
             displayNonePopUp();
         })
     }else{
