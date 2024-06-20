@@ -1,14 +1,39 @@
 class Slider{
-    constructor(sliderimgcontent,sliderbtnback,sliderbtnnext,imagenes,index = 0){
+    constructor(sliderimgcontent = document.getElementById('sliderimgcontent'),sliderbtnback = document.getElementById('sliderbtnback'),sliderbtnnext = document.getElementById('sliderbtnnext'),imagenes = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg'],index = 0){
         this.sliderimgcontent = sliderimgcontent;
         this.sliderbtnback = sliderbtnback;
         this.sliderbtnnext = sliderbtnnext;
-        this.imagenes = imagenes;
+        this.imagenes = imagenes; 
         this.index = index;
+
+        this.sliderbtnnext.addEventListener('click',event => {
+            this.sliderAuto(false);
+            this.setImgNext();
+        });
+
+        this.sliderbtnback.addEventListener('click',event => {
+            this.sliderAuto(false);
+            this.setImgBack();
+        });
+
+        this.setsliderimgcontent();
+        this.sliderAuto();
     }
 
-    get getsliderimgcontent () {
-        return this.getsliderimgcontent;
+    sliderAuto(next = true) {
+            setInterval(() => {
+                if(next){
+                    this.setImgNext();
+                    if(this.index === (this.imagenes.length -1)){
+                        next = false;
+                    }
+                }else{
+                    this.setImgBack();
+                    if(this.index === 0){
+                        next = true;
+                    }
+                }
+            },2500);
     }
 
     setsliderimgcontent() {
@@ -51,32 +76,9 @@ class Slider{
         }
     }
 }
-const arrayimgs = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg'];
 
-const slider = new Slider(document.getElementById('sliderimgcontent'),
-document.getElementById('sliderbtnback'),
-document.getElementById('sliderbtnnext'),arrayimgs);
+const slider = new Slider();
 
-slider.setsliderimgcontent();
 
-//NEXT
-document.getElementById('sliderbtnnext').addEventListener('click',event => {
-    slider.setImgNext();
-});
-//BACK
-document.getElementById('sliderbtnback').addEventListener('click',event => {
-    slider.setImgBack();
-});
 
-//Slider automatico
-let adelante = setInterval(() => {
-    slider.setImgNext();
-        if(slider.index === (slider.imagenes.length -1)){
-          let atras = setInterval(() => {
-                slider.setImgBack();
-                if(slider.index === 0){
-                    clearInterval(atras);
-                }
-            },2500);
-        }
-},2500);
+
